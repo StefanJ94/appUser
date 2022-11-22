@@ -15,10 +15,10 @@ public class RegistrationService {
 
     public String register(RegistrationRequest request) {
         return appUserService.signUpUser(new AppUser(
-                request.getEmail(),
                 request.getName(),
-                request.getPassword(),
-                request.getUsername()
+                request.getUsername(),
+                request.getEmail(),
+                request.getPassword()
         ));
     }
 }
